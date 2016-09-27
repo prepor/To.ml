@@ -47,6 +47,20 @@ Library toml
     XMETARequires: str, unix, ISO8601
 
 ###############################################################################
+# Cconv encoder / decoder                                                     #
+###############################################################################
+Library toml_cconv
+    BuildDepends: cconv, toml
+    FindlibParent: toml
+    FindlibName: cconv
+    Install: true
+    Modules: TomlCconv
+    Path: cconv/
+    XMETAEnable: true
+    XMETADescription: cconv encoder/decoder for Toml parser
+    XMETARequires: cconv, toml
+
+###############################################################################
 # Test executables                                                            #
 ###############################################################################
 Flag report
